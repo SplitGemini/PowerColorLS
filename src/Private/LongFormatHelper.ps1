@@ -17,7 +17,7 @@ function Get-LongFormatPrintout{
     )
 
     $isDirectory = Get-IsDirectory -fileSystemInfo $fileSystemInfo
-    $nameForDisplay = Get-NameForDisplay -fileSystemInfo $fileSystemInfo
+    $nameForDisplay = Get-NameForDisplay -fileSystemInfo $fileSystemInfo -long
     $mode = Get-ModeForLongListing -modeInput $fileSystemInfo.Mode -hideIcons $options.hideIcons
     $lastWriteTime = ($fileSystemInfo.LastWriteTime).ToString("f")
 
@@ -64,7 +64,9 @@ function Get-LongFormatPrintout{
     $groupColor = $longFormatData.groupColor
     $sizeColor = $longFormatData.sizeColor
     $lwColor = $longFormatData.lwColor
-
+    if ($options.showHiddenFiles){
+        $availableCharWith = 99999
+    }
     if($availableCharWith -gt $longFormatData.fullItemMaxLength){
         $printout = "${mode}  ${ownerColor}${ownerWithSpace}  ${groupColor}${groupWithSpace}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon} ${nameForDisplay}"
     }elseif($availableCharWith -gt $longFormatData.noGroupMaxLength){
@@ -164,8 +166,11 @@ function Get-Mode-Attribute-Color{
         "s" {
             return (ConvertFrom-RGBColor -RGB ("EDA1A1"))
         }
+        "l" {
+            return (ConvertFrom-RGBColor -RGB ("#CC0099"))
+        }
         default{
-            return (ConvertFrom-RGBColor -RGB ("EEEEEE"))
+            return (ConvertFrom-RGBColor -RGB ("#EEEEEE"))
         }
     }
 }
@@ -200,6 +205,9 @@ function Get-ModeForLongListing{
                 }
                 "s" {
                     $mode += $color + $glyphs["nf-fa-gear"] + " "
+                }
+                "l" {
+                    $mode += $color + $glyphs["nf-fa-external_link_square"] + " "
                 }
                 default{
                     $mode += $color +  $m + " "

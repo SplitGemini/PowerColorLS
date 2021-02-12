@@ -1,10 +1,13 @@
 function ConvertFrom-RGBColor {
     [OutputType([System.String])]
     param(
+        [AllowEmptyString()]
         [parameter(Mandatory)]
         [string]$RGB
     )
-
+    if (!$RGB) {
+        return ""
+    }
     $RGB = $RGB.Replace('#', '')
     $r   = [convert]::ToInt32($RGB.SubString(0,2), 16)
     $g   = [convert]::ToInt32($RGB.SubString(2,2), 16)
@@ -62,7 +65,7 @@ function Get-FolderColorHex{
 
     $colorHex = $colorTheme.Types.Directories.WellKnown[$name]
     if($null -eq $colorHex){
-        $colorHex = "EEEE8B"
+        return ""
     }
 
     return $colorHex
@@ -86,7 +89,7 @@ function Get-FileColorHex{
         $colorHex = $colorTheme.Types.Files[$fileExt]
     }
     if($null -eq $colorHex){
-        $colorHex = "EEEEEE"
+        return ""
     }
 
     return $colorHex

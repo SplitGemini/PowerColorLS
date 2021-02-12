@@ -80,8 +80,8 @@ function PowerColorLS{
     if($get_optionsResult.continue -eq $false){
         if($null -ne $get_optionsResult.errorMessage){
             # something was wrong with the parameters provided:
-            $errMsg = (ConvertFrom-RGBColor -RGB ("FF0000")) + $glyphs["nf-fa-warning"] + " " + $get_optionsResult.errorMessage
-            Write-Host $errMsg
+            $errMsg = $glyphs["nf-fa-warning"] + " " + $get_optionsResult.errorMessage
+            Write-Error $errMsg
         }
         return
     }

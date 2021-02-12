@@ -67,17 +67,29 @@ function Get-FilesAndFoldersListing{
 function Get-NameForDisplay{
     param(
         [Parameter(Mandatory = $true)]
-        $fileSystemInfo
+        $fileSystemInfo,
+        [Parameter()]
+        [switch]$long
     )
 
     $isDirectory = Get-IsDirectory -fileSystemInfo $fileSystemInfo
     $name = $fileSystemInfo.Name
 
-    if($isDirectory){
-        return "${name}\"
-    }else{
-        return $name
+    if ((($fileSystemInfo.LinkType -eq 'Junction') -or ($fileSystemInfo.LinkType -eq 'SymbolicLink')) -and $long) {
+        if($isDirectory){
+            return "${name}\ -> $($fileSystemInfo.Target)\"
+        }else{
+            return "${name} -> $($fileSystemInfo.Target)"
+        }
     }
+    else {
+        if($isDirectory){
+            return "${name}\"
+        }else{
+            return $name
+        }
+    }
+ 
 }
 
 function Get-DirectoryName{
@@ -180,7 +192,7 @@ function Get-IgnoreItem {
 
     $isDirectory = Get-IsDirectory -fileSystemInfo $fileSystemInfo
 
-    if((-not $options.showHiddenFiles) -and ($fileSystemInfo.name.StartsWith("."))) {
+    if((-not $options.showHiddenFiles) -and $fileSystemInfo.mode.contains('h')) {
         return $true
     }
 
