@@ -67,15 +67,13 @@ function Get-FilesAndFoldersListing{
 function Get-NameForDisplay{
     param(
         [Parameter(Mandatory = $true)]
-        $fileSystemInfo,
-        [Parameter()]
-        [switch]$long
+        $fileSystemInfo
     )
 
     $isDirectory = Get-IsDirectory -fileSystemInfo $fileSystemInfo
     $name = $fileSystemInfo.Name
 
-    if ((($fileSystemInfo.LinkType -eq 'Junction') -or ($fileSystemInfo.LinkType -eq 'SymbolicLink')) -and $long) {
+    if ((($fileSystemInfo.LinkType -eq 'Junction') -or ($fileSystemInfo.LinkType -eq 'SymbolicLink')) -and $options.longFormat) {
         if($isDirectory){
             return "${name}\ -> $($fileSystemInfo.Target)\"
         }else{
@@ -142,7 +140,11 @@ function Get-LongestItemLength{
     $longestItem = $null
     foreach($fileOrFolder in $filesAndFolders){
         $l = $fileOrFolder.Name.Length
-        if($l -gt $longestItemLength){
+        if ($options.longFormat -and (($fileOrFolder.LinkType -eq 'Junction') `
+            -or ($fileOrFolder.LinkType -eq 'SymbolicLink'))) {
+            $l += $fileOrFolder.Target.length + 5
+        }
+        if($l -gt $longestItemLength){ 
             $longestItemLength = $l
             $longestItem = $fileOrFolder
         }
@@ -152,7 +154,7 @@ function Get-LongestItemLength{
     if(($longestItemIsDirectory) -and (-not $options.fileOnly)){
         $longestItemLength += 1
     }
-
+    
     return $longestItemLength
 }
 

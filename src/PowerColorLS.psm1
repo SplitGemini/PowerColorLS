@@ -110,7 +110,7 @@ function PowerColorLS{
         longestItemLength = $longestItemLength
     }
 
-	$itemSpacerWidth = 4
+    $itemSpacerWidth = 4
     $lineCharsCounter = 0
 
     # get how many characters we have available in this console window
@@ -121,7 +121,7 @@ function PowerColorLS{
     }
 
     # start iterating over our items
-	foreach ($fileSystemInfo in $filesAndFolders) {
+    foreach ($fileSystemInfo in $filesAndFolders) {
 
         $color = Get-Color -fileSystemInfo $fileSystemInfo -colorTheme $colorTheme
         if(-not $options.hideIcons){

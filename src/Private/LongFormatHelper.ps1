@@ -17,7 +17,7 @@ function Get-LongFormatPrintout{
     )
 
     $isDirectory = Get-IsDirectory -fileSystemInfo $fileSystemInfo
-    $nameForDisplay = Get-NameForDisplay -fileSystemInfo $fileSystemInfo -long
+    $nameForDisplay = Get-NameForDisplay -fileSystemInfo $fileSystemInfo
     $mode = Get-ModeForLongListing -modeInput $fileSystemInfo.Mode -hideIcons $options.hideIcons
     $lastWriteTime = ($fileSystemInfo.LastWriteTime).ToString("f")
 
