@@ -89,5 +89,11 @@ general options:
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope
 ```
 
-## Terminal-Icons Data
-rewrite same foders
+## 修改
+1. 识别`Junction`和`SymbolicLink`并且可以显示源地址，这两种情况会忽略主题里的配置，因为都显示源链接当然知道是链接
+1. 修复当文件或文件夹名长度大于Terminal宽度时多输出一行问题
+1. 宽度对齐适配中文
+1. 使用`Terminal-Icons-Data`文件夹内容覆盖Module `Terminal-Icons/Data`文件夹，修复git默认颜色失效，同时默认前景色将写在主题配置里而不是代码里（空属性所示color）
+1. Terminal-Icons-Data补充多个类型icon和color
+1. 长列表隐藏icon时名称对齐
+1. `ls -a -l`（长列表显示所有文件）忽略宽度比较强制输出所有属性
