@@ -65,7 +65,7 @@ function Get-FolderColorHex{
 
     $colorHex = $colorTheme.Types.Directories.WellKnown[$name]
     if($null -eq $colorHex){
-        return ""
+        $colorHex = $colorTheme.Types.Directories['']
     }
 
     return $colorHex
@@ -89,8 +89,7 @@ function Get-FileColorHex{
         $colorHex = $colorTheme.Types.Files[$fileExt]
     }
     if($null -eq $colorHex){
-        return ""
+        $colorHex = $colorTheme.Types.Files['']
     }
-
     return $colorHex
 }

@@ -88,3 +88,6 @@ general options:
 ```powershell
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope
 ```
+
+## Terminal-Icons Data
+rewrite same foders
