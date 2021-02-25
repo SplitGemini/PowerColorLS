@@ -177,9 +177,9 @@ function Get-SortedFilesAndFoldersListing{
     if($options.sortByModificationTime){
         return $filesAndFolders  | Sort-Object Lastwritetime -descending
     }elseif($options.filesFirst){
-        return $filesAndFolders | Sort-Object {$_.GetType()} -descending #Attributes
+        return $filesAndFolders | Sort-Object -Property @{Expression = {$_.GetType()}; Descending = $True}, @{Expression = {$_.Name}; Descending = $False}
     }elseif($options.dirsFirst){
-        return $filesAndFolders | Sort-Object {$_.GetType()}  #Attributes
+        return $filesAndFolders | Sort-Object -Property @{Expression = {$_.GetType()}; Descending = $False}, @{Expression = {$_.Name}; Descending = $False}
     }else{
         return $filesAndFolders  | Sort-Object Name
     }
