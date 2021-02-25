@@ -139,10 +139,12 @@ function Get-LongestItemLength{
     $longestItemLength = 0
     $longestItem = $null
     foreach($fileOrFolder in $filesAndFolders){
-        $l = $fileOrFolder.Name.Length
+        #$l = $fileOrFolder.Name.Length
+        $l = Get-StringLength $fileOrFolder.Name
         if ($options.longFormat -and (($fileOrFolder.LinkType -eq 'Junction') `
             -or ($fileOrFolder.LinkType -eq 'SymbolicLink'))) {
-            $l += $fileOrFolder.Target.length + 5
+            #$l += $fileOrFolder.Target.length + 5
+            $l += ((Get-StringLength $fileOrFolder.Target) + 5)
         }
         if($l -gt $longestItemLength){ 
             $longestItemLength = $l
@@ -207,4 +209,27 @@ function Get-IgnoreItem {
     }
 
     return $false
+}
+
+function Get-StringLength {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$str
+    )
+    if (!$str) {
+        return 0
+    }
+    
+    $count = 0
+    for($i = 0;$i -lt $str.Length;$i ++) {
+        if ($str[$i] -match '[\u4e00-\u9fa5]') {
+            $count += 2
+        }
+        else {
+            $count += 1
+        }
+    }
+    # one chinese char 3 length, but i want 2.
+    #$count = [System.Text.Encoding]::UTF8.GetByteCount($str)
+    return $count
 }

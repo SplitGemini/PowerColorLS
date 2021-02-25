@@ -126,9 +126,11 @@ function PowerColorLS{
         $color = Get-Color -fileSystemInfo $fileSystemInfo -colorTheme $colorTheme
         if(-not $options.hideIcons){
             $icon = Get-Icon -fileSystemInfo $fileSystemInfo -iconTheme $iconTheme -glyphs $glyphs
+            $colorAndIcon = "${color}${icon} "
         }
-
-        $colorAndIcon = "${color}${icon}"
+        else {
+            $colorAndIcon = "${color}"
+        }
 
         $gitColorAndIcon = Get-GitColorAndIcon -gitInfo $gitInfo -fileSystemInfo $fileSystemInfo -glyphs $glyphs -hideIcons $options.hideIcons
         $colorAndIcon = "${gitColorAndIcon}${colorAndIcon}"
@@ -146,16 +148,23 @@ function PowerColorLS{
         }else{
             $nameForDisplay = Get-NameForDisplay -fileSystemInfo $fileSystemInfo
             if($options.hideIcons){
-                $printout = "${icon}${nameForDisplay}" + (" "*($longestItemLength - $nameForDisplay.length + $itemSpacerWidth))
+                #$printout = "${icon}${nameForDisplay}" + (" "*($longestItemLength - $nameForDisplay.length + $itemSpacerWidth))
+                $printout = "${nameForDisplay}" + (" "*($longestItemLength - (Get-StringLength $nameForDisplay) + $itemSpacerWidth))
             }else{
-                $printout = "${icon} ${nameForDisplay}" + (" "*($longestItemLength - $nameForDisplay.length + $itemSpacerWidth))
+                #$printout = "${icon} ${nameForDisplay}" + (" "*($longestItemLength - $nameForDisplay.length + $itemSpacerWidth))
+                $printout = "${icon} ${nameForDisplay}" + (" "*($longestItemLength - (Get-StringLength $nameForDisplay) + $itemSpacerWidth))
             }
-            $lineCharsCounter += ($printout.length + $gitInfo.lineCharsCounterIncrease)
+            #$lineCharsCounter += ($printout.length + $gitInfo.lineCharsCounterIncrease)
+            $lineCharsCounter += ((Get-StringLength $printout) + $gitInfo.lineCharsCounterIncrease)
         }
 
-        if ((-not $options.oneEntryPerLine) -and(-not $options.longFormat) -and ( $lineCharsCounter -ge ($availableCharWith)) ) {
+        if ((-not $options.oneEntryPerLine) -and(-not $options.longFormat) -and ($lineCharsCounter -ge $availableCharWith)) { 
+            #$lineCharsCounter = ($printout.length + $gitInfo.lineCharsCounterIncrease)
             Write-Host ""
-            $lineCharsCounter = ($printout.length + $gitInfo.lineCharsCounterIncrease)
+            $lineCharsCounter = ((Get-StringLength $printout) + $gitInfo.lineCharsCounterIncrease)
+            if ($lineCharsCounter -ge $availableCharWith) {
+                $printout = $printout.trim()
+            }
         }
 
         if($options.longFormat){

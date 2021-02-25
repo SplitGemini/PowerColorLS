@@ -68,15 +68,15 @@ function Get-LongFormatPrintout{
         $availableCharWith = 99999
     }
     if($availableCharWith -gt $longFormatData.fullItemMaxLength){
-        $printout = "${mode}  ${ownerColor}${ownerWithSpace}  ${groupColor}${groupWithSpace}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon} ${nameForDisplay}"
+        $printout = "${mode}  ${ownerColor}${ownerWithSpace}  ${groupColor}${groupWithSpace}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon}${nameForDisplay}"
     }elseif($availableCharWith -gt $longFormatData.noGroupMaxLength){
-        $printout = "${mode}  ${ownerColor}${ownerWithSpace}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon} ${nameForDisplay}"
+        $printout = "${mode}  ${ownerColor}${ownerWithSpace}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon}${nameForDisplay}"
     }elseif($availableCharWith -gt $longFormatData.noGroupOrOwnerMaxLength){
-        $printout = "${mode}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon} ${nameForDisplay}"
+        $printout = "${mode}  ${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon}${nameForDisplay}"
     }elseif($availableCharWith -gt $longFormatData.noGroupOrOwnerOrModeMaxLength){
-        $printout = "${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon} ${nameForDisplay}"
+        $printout = "${sizeColor}${sizeWithSpace}  ${lwColor}${lwWithSpace}  ${colorAndIcon}${nameForDisplay}"
     }else{
-        $printout = "${sizeColor}${sizeWithSpace}  ${colorAndIcon} ${nameForDisplay}"
+        $printout = "${sizeColor}${sizeWithSpace}  ${colorAndIcon}${nameForDisplay}"
     }
 
     return $printout
