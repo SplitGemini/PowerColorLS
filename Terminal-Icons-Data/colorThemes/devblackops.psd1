@@ -61,12 +61,31 @@
                 'Program Files'= '#5D6D7E'
                 '下载'          = '#3F85FF'
                 'Program Files (x86)' = '#5D6D7E'
-                'Creative Cloud Files'='#CCCCFF'
+                'Creative Cloud Files'= '#CCCCFF'
                 'Google Download'     = '#2CC4D0'
                 'BaiduYunDownload'    = '#CD6155'
                 'Telegram Desktop'    = '#0D83BE'
                 'GH'                  = '#2E86C1'
 
+                #culture
+                'localizations'       = '#DBEB4E'
+                'localization'        = '#DBEB4E'
+                'translations'        = '#DBEB4E'
+                'translation'         = '#DBEB4E'
+                'Langs'               = '#DBEB4E'
+                'Lang'                = '#DBEB4E'
+                'Lng'                 = '#DBEB4E'
+                'Lngs'                = '#DBEB4E'
+                'languages'           = '#DBEB4E'
+                'language'            = '#DBEB4E'
+                'locales'             = '#DBEB4E'
+                'locale'              = '#DBEB4E'
+                'I18N'                = '#DBEB4E'
+                'strings'             = '#DBEB4E'
+
+                # logs
+                'logs'                = '#4D815A'
+                'log'                 = '#4D815A'
             }
         }
         Files = @{
@@ -672,9 +691,16 @@
             #binary
             '.bin'                  = '#5D6D7E'
             '.dat'                  = '#5D6D7E'
+            '.pyc'                  = '#5D6D7E'
 
             #backup
             '.bak'                  = '#839192'
+            '.old'                  = '#839192'
+
+            #culture
+            '.lng'                  = '#DBEB4E'
+            '.lang'                 = '#DBEB4E'
+            '.mo'                   = '#DBEB4E'
         }
     }
 }

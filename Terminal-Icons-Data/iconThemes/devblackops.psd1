@@ -66,7 +66,26 @@
                 'BaiduYunDownload'    = 'nf-mdi-folder_download'
                 'Telegram Desktop'    = 'nf-fae-telegram'
                 'GH'                  = 'nf-mdi-home'
-                
+
+                #culture
+                'localizations'       = 'nf-fa-language'
+                'localization'        = 'nf-fa-language'
+                'translations'        = 'nf-fa-language'
+                'translation'         = 'nf-fa-language'
+                'Langs'               = 'nf-fa-language'
+                'Lang'                = 'nf-fa-language'
+                'Lng'                 = 'nf-fa-language'
+                'Lngs'                = 'nf-fa-language'
+                'languages'           = 'nf-fa-language'
+                'language'            = 'nf-fa-language'
+                'locales'             = 'nf-fa-language'
+                'locale'              = 'nf-fa-language'
+                'I18N'                = 'nf-fa-language'
+                'strings'             = 'nf-fa-language'
+
+                # logs
+                'logs'                = 'nf-fa-comment_o'
+                'log'                 = 'nf-fa-comment_o'
 
             }
         }
@@ -674,9 +693,16 @@
             #binary
             '.bin'                  = 'nf-oct-file_binary'
             '.dat'                  = 'nf-oct-file_binary'
+            '.pyc'                  = 'nf-oct-file_binary'
 
             #backup
             '.bak'                  = 'nf-mdi-backup_restore'
+            '.old'                  = 'nf-mdi-backup_restore'
+
+            #culture
+            '.lng'                  = 'nf-fa-language'
+            '.lang'                 = 'nf-fa-language'
+            '.mo'                   = 'nf-fa-language'
         }
     }
 }
