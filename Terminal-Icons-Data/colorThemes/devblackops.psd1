@@ -195,6 +195,7 @@
             '.brotli'               = '#DAA520'
             '.rar'                  = '#DAA520'
             '.tgz'                  = '#DAA520'
+            '.apk'                  = '#4EEB7D'
             # added
             '.001'                  = '#DAA520'
             '.002'                  = '#DAA520'

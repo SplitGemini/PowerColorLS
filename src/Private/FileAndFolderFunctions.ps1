@@ -35,9 +35,9 @@ function Get-FilesAndFoldersListing{
         [string]$query
     )
     if($options.showHiddenFiles){
-        $filesAndFolders = Get-ChildItem -Path $query -force
+        $filesAndFolders = Get-ChildItem $query -force
     }else{
-        $filesAndFolders = Get-ChildItem -Path $query
+        $filesAndFolders = Get-ChildItem $query
     }
 
     
@@ -152,7 +152,7 @@ function Get-LongestItemLength{
         }
     }
 
-    $longestItemIsDirectory = Test-Path -path ($longestItem.FullName) -pathtype container
+    $longestItemIsDirectory = Test-Path $longestItem.FullName -pathtype container
     if(($longestItemIsDirectory) -and (-not $options.fileOnly)){
         $longestItemLength += 1
     }
@@ -213,6 +213,7 @@ function Get-IgnoreItem {
 
 function Get-StringLength {
     param(
+        [AllowEmptyString()]
         [Parameter(Mandatory = $true)]
         [string]$str
     )

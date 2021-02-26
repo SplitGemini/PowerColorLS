@@ -197,6 +197,7 @@
             '.brotli'               = 'nf-oct-file_zip'
             '.rar'                  = 'nf-oct-file_zip'
             '.tgz'                  = 'nf-oct-file_zip'
+            '.apk'                  = 'nf-dev-android'
             # added
             '.001'                  = 'nf-oct-file_zip'
             '.002'                  = 'nf-oct-file_zip'

@@ -11,7 +11,7 @@ function Get-LongestItem{
     $longestItem = ""
     foreach($item in $items){
         $itemValue = Invoke-Command -ScriptBlock $scriptBlock
-        if($itemValue.Length -gt $longestItem.Length){
+        if((Get-StringLength $itemValue) -gt (Get-StringLength $longestItem)){
             $longestItem = $itemValue
         }
     }

@@ -14,14 +14,12 @@ function Show-Report{
     $fileCount = ($filesAndFolders | Where-Object {$_.GetType() -eq [System.IO.FileInfo]}).Length
     $itemsLength = $filesAndFolders.Length
 
-    $queryColor = (ConvertFrom-RGBColor -RGB ("00AAFF"))
-    $baseColor = (ConvertFrom-RGBColor -RGB ("FFFFFF"))
-
-    $report = "
-${baseColor}Found ${itemsLength} files and folders matching ${queryColor}$query${baseColor}
+    $query = Resolve-Path $query
+    $report = @"
+Found ${itemsLength} files and folders matching `"$query`"
         Folders:    $directoryCount
         Files:      $fileCount
-"
+"@
 
     if(-not $options.longFormat){
         Write-Host ""

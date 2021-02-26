@@ -28,7 +28,7 @@ function Get-OptionsResult{
         foreach($arg in $arguments){
             if($null -ne $arg){
                 $a = "$arg"
-                $isPath = Test-Path -path $a
+                $isPath = Test-Path $a
                 if($isPath){
                     $get_optionsResult.query = $arg
                 }else{
@@ -79,12 +79,12 @@ function Get-OptionsResult{
                         }
                         default{
                             if($a -like('-*')){
-                                $get_optionsResult.errorMessage = "invalid option $a"
+                                $get_optionsResult.errorMessage = "invalid option `"$a`""
                                 $get_optionsResult.continue = $false
                                 return $get_optionsResult
 
                             }else{
-                                $get_optionsResult.errorMessage = "$a is not a valid path"
+                                $get_optionsResult.errorMessage = "`"$a`" is not a valid path"
                                 $get_optionsResult.continue = $false
                                 return $get_optionsResult
                             }
