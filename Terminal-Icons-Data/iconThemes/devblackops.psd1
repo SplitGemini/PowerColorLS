@@ -693,7 +693,9 @@
             #binary
             '.bin'                  = 'nf-oct-file_binary'
             '.dat'                  = 'nf-oct-file_binary'
+            '.data'                 = 'nf-oct-file_binary'
             '.pyc'                  = 'nf-oct-file_binary'
+            '.dmp'                  = 'nf-oct-file_binary'
 
             #backup
             '.bak'                  = 'nf-mdi-backup_restore'
@@ -703,6 +705,10 @@
             '.lng'                  = 'nf-fa-language'
             '.lang'                 = 'nf-fa-language'
             '.mo'                   = 'nf-fa-language'
+
+            # useless
+            '.tmp'                  = 'nf-fa-trash_o'
+            '.cache'                = 'nf-fa-trash_o'
         }
     }
 }

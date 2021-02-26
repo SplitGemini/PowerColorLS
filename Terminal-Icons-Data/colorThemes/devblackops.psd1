@@ -691,7 +691,9 @@
             #binary
             '.bin'                  = '#5D6D7E'
             '.dat'                  = '#5D6D7E'
+            '.data'                 = '#5D6D7E'
             '.pyc'                  = '#5D6D7E'
+            '.dmp'                  = '#5D6D7E'
 
             #backup
             '.bak'                  = '#839192'
@@ -701,6 +703,10 @@
             '.lng'                  = '#DBEB4E'
             '.lang'                 = '#DBEB4E'
             '.mo'                   = '#DBEB4E'
+
+            # useless
+            '.tmp'                  = '#766B7B'
+            '.cache'                = '#766B7B'
         }
     }
 }
