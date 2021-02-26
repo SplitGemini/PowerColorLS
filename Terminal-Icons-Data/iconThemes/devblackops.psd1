@@ -216,7 +216,7 @@
             '.brotli'               = 'nf-oct-file_zip'
             '.rar'                  = 'nf-oct-file_zip'
             '.tgz'                  = 'nf-oct-file_zip'
-            '.apk'                  = 'nf-dev-android'
+            
             # added
             '.001'                  = 'nf-oct-file_zip'
             '.002'                  = 'nf-oct-file_zip'
@@ -309,6 +309,8 @@
             '.r29'                  = 'nf-oct-file_zip'
             '.r30'                  = 'nf-oct-file_zip'
             '.pak'                  = 'nf-fa-file_archive_o'
+            '.iso'                  = 'nf-fa-file_archive_o'
+            '.apk'                  = 'nf-dev-android' 
             
             # Executable things
             '.bat'                  = 'nf-custom-msdos'
@@ -371,6 +373,7 @@
             '.dotsettings'          = 'nf-fa-gear'
             '.user'                 = 'nf-fa-gear'
             '.cfg'                  = 'nf-fa-gear'
+            '.inf'                  = 'nf-fa-gear'
 
             # Source Files
             '.c'                    = 'nf-mdi-language_c'

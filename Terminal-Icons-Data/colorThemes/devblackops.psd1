@@ -214,7 +214,7 @@
             '.brotli'               = '#DAA520'
             '.rar'                  = '#DAA520'
             '.tgz'                  = '#DAA520'
-            '.apk'                  = '#4EEB7D'
+            
             # added
             '.001'                  = '#DAA520'
             '.002'                  = '#DAA520'
@@ -307,6 +307,8 @@
             '.r29'                  = '#DAA520'
             '.r30'                  = '#DAA520'
             '.pak'                  = '#DAA520'
+            '.iso'                  = '#DAA520'
+            '.apk'                  = '#4EEB7D'
             
             # Executable things
             '.bat'                  = '#008000'
@@ -370,6 +372,7 @@
             '.dotsettings'          = '#6495ED'
             '.user'                 = '#6495ED'
             '.cfg'                  = '#6495ED'
+            '.inf'                  = '#6495ED'
 
             # Source Files
             '.c'                    = '#A9A9A9'
