@@ -132,7 +132,7 @@
                 '.mrconfig'                     = 'nf-fa-gear'
                 '.yardopts'                     = 'nf-fa-gear'
                 'manifest.mf'                   = 'nf-fa-gear'
-                'manifest'                   = 'nf-fa-gear'
+                'manifest'                      = 'nf-fa-gear'
                 '.clang-format'                 = 'nf-fa-gear'
                 '.clang-tidy'                   = 'nf-fa-gear'
                 'favicon.ico'                   = 'nf-seti-favicon'
@@ -142,6 +142,9 @@
                 'bitbucket-pipelines.yml'       = 'nf-dev-bitbucket'
                 'bitbucket-pipelines.yaml'      = 'nf-dev-bitbucket'
                 '.azure-pipelines.yml'          = 'nf-mdi-azure'
+                'version'                       = 'nf-oct-versions'
+                '.version'                      = 'nf-oct-versions'
+
                 # Firebase
                 'firebase.json'                 = 'nf-dev-firebase'
                 '.firebaserc'                   = 'nf-dev-firebase'
@@ -431,6 +434,8 @@
             '.log'                  = 'nf-fa-th_list'
             '.txt'                  = 'nf-mdi-file_document'
             '.info'                 = 'nf-fa-info_circle'
+            '.sig'                  = 'nf-fa-american_sign_language_interpreting'
+            '.sha256'               = 'nf-fa-american_sign_language_interpreting'
 
 
             # HTML/css
@@ -621,6 +626,7 @@
 
             # Email
             '.ics'                  = 'nf-fa-calendar'
+            '.msg'                  = 'nf-fa-calendar'
 
             # Certifactes
             '.cer'                  = 'nf-fa-certificate'
@@ -684,7 +690,7 @@
             '.tf'                   = 'nf-dev-code_badge'
             '.tfvars'               = 'nf-dev-code_badge'
 
-            #subtitles
+            # subtitles
             '.ass'                  = 'nf-mdi-message_video'
             '.srt'                  = 'nf-mdi-message_video'
             '.ssa'                  = 'nf-mdi-message_video'
@@ -693,18 +699,18 @@
             '.vtt'                  = 'nf-mdi-message_video'
             '.lrc'                  = 'nf-mdi-bookmark_music'
 
-            #binary
+            # binary
             '.bin'                  = 'nf-oct-file_binary'
             '.dat'                  = 'nf-oct-file_binary'
             '.data'                 = 'nf-oct-file_binary'
             '.pyc'                  = 'nf-oct-file_binary'
             '.dmp'                  = 'nf-oct-file_binary'
 
-            #backup
+            # backup
             '.bak'                  = 'nf-mdi-backup_restore'
             '.old'                  = 'nf-mdi-backup_restore'
 
-            #culture
+            # culture
             '.lng'                  = 'nf-fa-language'
             '.lang'                 = 'nf-fa-language'
             '.mo'                   = 'nf-fa-language'
@@ -712,6 +718,12 @@
             # useless
             '.tmp'                  = 'nf-fa-trash_o'
             '.cache'                = 'nf-fa-trash_o'
+
+            # chrome extention
+            '.crx'                  = 'nf-dev-chrome'
+
+            # system file
+            '.cat'                  = 'nf-mdi-menu'
         }
     }
 }

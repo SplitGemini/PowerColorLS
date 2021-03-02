@@ -140,6 +140,8 @@
                 'bitbucket-pipelines.yml'       = '#87CEFA'
                 'bitbucket-pipelines.yaml'      = '#87CEFA'
                 '.azure-pipelines.yml'          = '#00BFFF'
+                'version'                       = '#7DF81C'
+                '.version'                      = '#7DF81C'
 
                 # Firebase
                 'firebase.json'                 = '#FFA500'
@@ -428,7 +430,9 @@
             # Text data files
             '.log'                  = '#F0E68C'
             '.txt'                  = '#00CED1'
-            '.info'                  = '#58D68D'
+            '.info'                 = '#58D68D'
+            '.sig'                  = '#CC84EC'
+            '.sha256'               = '#CC84EC'
 
             # HTML/css
             '.html'                 = '#CD5C5C'
@@ -619,6 +623,7 @@
 
             # Email
             '.ics'                  = '#00CED1'
+            '.msg'                  = '#00CED1'
 
             # Certifactes
             '.cer'                  = '#FF6347'
@@ -682,7 +687,7 @@
             '.tf'                   = '#948EEC'
             '.tfvars'               = '#948EEC'
             
-            #subtitles
+            # subtitles
             '.ass'                  = '#A40606'
             '.srt'                  = '#A40606'
             '.ssa'                  = '#A40606'
@@ -691,18 +696,18 @@
             '.vtt'                  = '#A40606'
             '.lrc'                  = '#F2D7D5'
 
-            #binary
+            # binary
             '.bin'                  = '#5D6D7E'
             '.dat'                  = '#5D6D7E'
             '.data'                 = '#5D6D7E'
             '.pyc'                  = '#5D6D7E'
             '.dmp'                  = '#5D6D7E'
 
-            #backup
+            # backup
             '.bak'                  = '#839192'
             '.old'                  = '#839192'
 
-            #culture
+            # culture
             '.lng'                  = '#DBEB4E'
             '.lang'                 = '#DBEB4E'
             '.mo'                   = '#DBEB4E'
@@ -710,6 +715,12 @@
             # useless
             '.tmp'                  = '#766B7B'
             '.cache'                = '#766B7B'
+
+            # chrome extention
+            '.crx'                  = '#835A95'
+
+            # system file
+            '.cat'                  = '#F84A1C'
         }
     }
 }
