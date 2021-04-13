@@ -38,6 +38,10 @@
                 'github'       = '#C0C0C0'
                 'node_modules' = '#6B8E23'
                 '.terraform'   = '#948EEC'
+                '.azure'       = '00BFFF'
+                '.aws'         = 'EC912D'
+                '.kube'        = '326DE6'
+                '.docker'      = '2391E6'
 
                 #add
                 'Saved Games'  = '#663366'
@@ -336,6 +340,7 @@
 
             # Java
             '.java'                 = '#F89820'
+            '.jar'                  = '#F89820'
 
             # Python
             '.py'                   = '#4B8BBE'
@@ -351,6 +356,7 @@
             '.dll'                  = '#87CEEB'
             '.sys'                  = '#922B21'
             '.obj'                  = '#87CEEB'
+            '.lib'                  = '#87CEEB'
             
 
             # Importable Data files
@@ -425,6 +431,7 @@
             '.patch'                = '#FF4500'
 
             # Project files
+            '.user'                 = '#00BFFF'
             '.code-workspace'       = '#00BFFF'
 
             # Text data files
@@ -686,6 +693,7 @@
             # Terraform
             '.tf'                   = '#948EEC'
             '.tfvars'               = '#948EEC'
+            '.auto.tfvars'          = '#948EEC'
             
             # subtitles
             '.ass'                  = '#A40606'

@@ -38,6 +38,10 @@
                 '.github'      = 'nf-custom-folder_github'
                 'github'       = 'nf-fa-github_alt'
                 'node_modules' = 'nf-custom-folder_npm'
+                '.azure'       = 'nf-mdi-azure'
+                '.aws'         = 'nf-dev-aws'
+                '.kube'        = 'nf-mdi-ship_wheel'
+                '.docker'      = 'nf-dev-docker'
 
                 # add
                 'Saved Games'  = 'nf-fa-gamepad'
@@ -338,6 +342,7 @@
 
             # Java
             '.java'                 = 'nf-dev-java'
+            '.jar'                  = 'nf-dev-java'
 
             # Python
             '.py'                   = 'nf-dev-python'
@@ -353,6 +358,7 @@
             '.dll'                  = 'nf-fa-archive'
             '.sys'                  = 'nf-dev-aptana'
             '.obj'                  = 'nf-fa-archive'
+            '.lib'                  = 'nf-fa-archive'
             
 
             # Importable Data files
@@ -428,10 +434,11 @@
             '.patch'                = 'nf-dev-git'
 
             # Project files
+            '.user'                 = 'nf-mdi-visualstudio'
             '.code-workspace'       = 'nf-mdi-visualstudio'
 
             # Text data files
-            '.log'                  = 'nf-fa-th_list'
+            '.log'                  = 'nf-mdi-view_list'
             '.txt'                  = 'nf-mdi-file_document'
             '.info'                 = 'nf-fa-info_circle'
             '.sig'                  = 'nf-fa-american_sign_language_interpreting'
@@ -494,18 +501,18 @@
             '.applescript'          = 'nf-dev-apple'
 
             # XML
-            '.xml'                  = 'nf-fa-code'
-            '.plist'                = 'nf-fa-code'
-            '.xsd'                  = 'nf-fa-code'
-            '.dtd'                  = 'nf-fa-code'
-            '.xsl'                  = 'nf-fa-code'
-            '.xslt'                 = 'nf-fa-code'
-            '.resx'                 = 'nf-fa-code'
-            '.iml'                  = 'nf-fa-code'
-            '.xquery'               = 'nf-fa-code'
-            '.tmLanguage'           = 'nf-fa-code'
-            '.manifest'             = 'nf-fa-code'
-            '.project'              = 'nf-fa-code'
+            '.xml'                  = 'nf-mdi-view'
+            '.plist'                = 'nf-mdi-view'
+            '.xsd'                  = 'nf-mdi-view'
+            '.dtd'                  = 'nf-mdi-view'
+            '.xsl'                  = 'nf-mdi-view'
+            '.xslt'                 = 'nf-mdi-view'
+            '.resx'                 = 'nf-mdi-view'
+            '.iml'                  = 'nf-mdi-view'
+            '.xquery'               = 'nf-mdi-view'
+            '.tmLanguage'           = 'nf-mdi-view'
+            '.manifest'             = 'nf-mdi-view'
+            '.project'              = 'nf-mdi-view'
 
             # Documents
             '.chm'                  = 'nf-mdi-help_box'
@@ -689,6 +696,10 @@
             # Terraform
             '.tf'                   = 'nf-dev-code_badge'
             '.tfvars'               = 'nf-dev-code_badge'
+            '.tf.json'              = 'nf-dev-code_badge'
+            '.tfvars.json'          = 'nf-dev-code_badge'
+            '.auto.tfvars'          = 'nf-dev-code_badge'
+            '.auto.tfvars.json'     = 'nf-dev-code_badge'
 
             # subtitles
             '.ass'                  = 'nf-mdi-message_video'
