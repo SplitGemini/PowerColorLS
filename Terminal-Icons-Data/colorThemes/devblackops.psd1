@@ -431,7 +431,6 @@
             '.patch'                = '#FF4500'
 
             # Project files
-            '.user'                 = '#00BFFF'
             '.code-workspace'       = '#00BFFF'
 
             # Text data files

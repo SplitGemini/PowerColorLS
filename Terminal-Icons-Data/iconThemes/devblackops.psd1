@@ -434,7 +434,6 @@
             '.patch'                = 'nf-dev-git'
 
             # Project files
-            '.user'                 = 'nf-mdi-visualstudio'
             '.code-workspace'       = 'nf-mdi-visualstudio'
 
             # Text data files
